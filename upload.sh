@@ -1,0 +1,1 @@
+rsync -rv -e 'ssh -p 9999' --exclude-from='./excludeFiles' ./  root@yrx.vps.rt:/root/projects/ai-btalert-cn

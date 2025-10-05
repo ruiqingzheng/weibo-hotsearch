@@ -7,7 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "pm2:dev": "pm2 start ecosystem.config.js --env development",
+    "pm2:prod": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop weibo-hotsearch-api",
+    "pm2:restart": "pm2 restart weibo-hotsearch-api",
+    "pm2:delete": "pm2 delete weibo-hotsearch-api",
+    "pm2:logs": "pm2 logs weibo-hotsearch-api",
+    "pm2:monit": "pm2 monit"
   },
   "dependencies": {
     "@types/cors": "^2.8.19",
